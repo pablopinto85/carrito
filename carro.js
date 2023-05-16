@@ -5,17 +5,16 @@ const Producto = function(nombre, precio, stock) {
   this.stock = stock;
 };
 // Creación de productos
-let producto1 = new Producto("((1)) aro oro", 99000, 10);
-let producto2 = new Producto("((2)) aro plata", 49000, 15);
-let producto3 = new Producto("((3)) aro acero quirurgico", 9900, 20);
-let producto4 = new Producto("((4)) anillo oro", 150000, 5);
-let producto5 = new Producto("((5)) anillo plata", 79000, 15);
-let producto6 = new Producto("((6)) anillo acero quirurgico", 19000, 20);
-let producto7 = new Producto("((7)) argolla oro matrimonio", 299000, 8);
-let producto8 = new Producto("((8)) colgante plata", 99000, 20);
-let producto9 = new Producto("((9)) cadena acero", 29000, 25);
-let producto10 = new Producto("((10)) colgante oro", 199000, 10);
-let producto11 = new Producto("((11)) cadena plata", 89000, 15);
+let producto1 = new Producto("(1) aro oro", 99000, 10);
+let producto2 = new Producto("(2) aro plata", 49000, 15);
+let producto3 = new Producto("(3) aro acero quirurgico", 9900, 20);
+let producto4 = new Producto("(4) anillo oro", 150000, 5);
+let producto5 = new Producto("(5) anillo plata", 79000, 15);
+let producto6 = new Producto("(6) anillo acero quirurgico", 19000, 20);
+let producto7 = new Producto("(7) argolla oro matrimonio", 299000, 8);
+let producto8 = new Producto("(8) colgante plata", 99000, 20);
+let producto10 = new Producto("(9) colgante oro", 199000, 10);
+let producto11 = new Producto("(10) cadena plata", 89000, 15);
 
 
 let lista = [
@@ -29,9 +28,7 @@ let lista = [
   producto8,
   producto9,
   producto10,
-  producto11,
-
-];
+  ];
 // Función para filtrar productos por palabra clave ingresada por el usuario
 function promptFiltrarProductos() {
   let palabraClave = prompt("Ingresa el producto que deseas buscar").trim().toUpperCase();
