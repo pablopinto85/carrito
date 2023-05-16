@@ -16,7 +16,7 @@ let producto8 = new Producto("((8)) colgante plata", 99000, 20);
 let producto9 = new Producto("((9)) cadena acero", 29000, 25);
 let producto10 = new Producto("((10)) colgante oro", 199000, 10);
 let producto11 = new Producto("((11)) cadena plata", 89000, 15);
-let producto12 = new Producto("((12)) cadena oro", 159000, 20);
+
 
 let lista = [
   producto1,
@@ -30,7 +30,7 @@ let lista = [
   producto9,
   producto10,
   producto11,
-  producto12
+
 ];
 // Función para filtrar productos por palabra clave ingresada por el usuario
 function promptFiltrarProductos() {
