@@ -13,8 +13,8 @@ let producto5 = new Producto("(5) anillo plata", 79000, 15);
 let producto6 = new Producto("(6) anillo acero quirurgico", 19000, 20);
 let producto7 = new Producto("(7) argolla oro matrimonio", 299000, 8);
 let producto8 = new Producto("(8) colgante plata", 99000, 20);
-let producto10 = new Producto("(9) colgante oro", 199000, 10);
-let producto11 = new Producto("(10) cadena plata", 89000, 15);
+let producto9 = new Producto("(9) colgante oro", 199000, 0);
+
 
 
 let lista = [
@@ -27,8 +27,8 @@ let lista = [
   producto7,
   producto8,
   producto9,
-  producto10,
-  ];
+    
+];
 // Función para filtrar productos por palabra clave ingresada por el usuario
 function promptFiltrarProductos() {
   let palabraClave = prompt("Ingresa el producto que deseas buscar").trim().toUpperCase();
