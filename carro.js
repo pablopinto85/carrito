@@ -5,16 +5,15 @@ const Producto = function(nombre, precio, stock) {
   this.stock = stock;
 };
 // Creación de productos
-let producto1 = new Producto("(1) aro oro", 99000, 10);
-let producto2 = new Producto("(2) aro plata", 49000, 15);
-let producto3 = new Producto("(3) aro acero quirurgico", 9900, 20);
-let producto4 = new Producto("(4) anillo oro", 150000, 5);
-let producto5 = new Producto("(5) anillo plata", 79000, 15);
-let producto6 = new Producto("(6) anillo acero quirurgico", 19000, 20);
-let producto7 = new Producto("(7) argolla oro matrimonio", 299000, 8);
-let producto8 = new Producto("(8) colgante plata", 99000, 20);
-let producto9 = new Producto("(9) colgante oro", 199000, 0);
-
+let producto1 = new Producto("(0) aro oro", 99000, 10);
+let producto2 = new Producto("(1) aro plata", 49000, 15);
+let producto3 = new Producto("(2) aro acero quirurgico", 9900, 20);
+let producto4 = new Producto("(3) anillo oro", 150000, 5);
+let producto5 = new Producto("(4) anillo plata", 79000, 15);
+let producto6 = new Producto("(5) anillo acero quirurgico", 19000, 20);
+let producto7 = new Producto("(6) argolla oro matrimonio", 299000, 8);
+let producto8 = new Producto("(7) colgante plata", 99000, 20);
+let producto9 = new Producto("(8) colgante oro", 199000, 0);
 
 
 let lista = [
@@ -26,10 +25,10 @@ let lista = [
   producto6,
   producto7,
   producto8,
-  producto9,
+  producto9
     
 ];
-// Función para filtrar productos por palabra clave ingresada por el usuario
+// Función para filtrar productos por palabra clave ingresada por el usuario, funcion llamada desde consola
 function promptFiltrarProductos() {
   let palabraClave = prompt("Ingresa el producto que deseas buscar").trim().toUpperCase();
   let resultado = lista.filter((producto) => producto.nombre.toUpperCase().includes(palabraClave));
@@ -51,12 +50,12 @@ while (true) {
   let opcion = parseInt(prompt("Selecciona una opción:\n1. Agregar producto al carrito\n2. Ver carrito\n3. Finalizar compra\n4. Salir"));
 
   if (opcion === 1) {
-    let productoIndex = parseInt(prompt("Ingresa el índice del producto que deseas agregar al carrito:"));
+    let productoIndice = parseInt(prompt("Ingresa el índice del producto que deseas agregar al carrito del 0 a 8:"));
 
-    if (isNaN(productoIndex) || productoIndex < 0 || productoIndex >= lista.length || productoIndex === "") {
+    if (isNaN(productoIndice) || productoIndice < 0 || productoIndice >= lista.length || productoIndice === "") {
       alert("Índice inválido.");
     } else {
-      let producto = lista[productoIndex];
+      let producto = lista[productoIndice];         //defino variable producto
       if (producto.stock > 0) {
         carrito.push(producto);
         producto.stock--;
